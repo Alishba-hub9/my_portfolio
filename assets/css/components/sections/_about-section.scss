@@ -1,0 +1,27 @@
+.about-section {
+    .about-image {
+      img {
+        border-radius: 5px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+    }
+    .about-text {
+      p {
+        margin-bottom: 35px;
+        .dynamic-role {
+          color: #e74c3c;
+          font-weight: $font-weight-bold;
+        }
+      }
+    }
+}
+
+@include responsive("lg-devices"){
+  .about-section { 
+    .about-text{
+     p{
+    margin-bottom: 18px;
+  }
+}
+}
+}

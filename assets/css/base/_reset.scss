@@ -1,0 +1,44 @@
+@font-face {
+    font-family: "Jost";
+    src: url("/assets/fonts/Jost/Jost-Regular.ttf");
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html,
+  body{
+    font-family: "Jost";
+    overflow-x: hidden;
+    line-height: 1.6;
+    background-color: $background-color;
+    color: $text-color;
+  }
+  
+  a {
+    text-decoration: none;
+    color: $primary-color;
+  
+    &:hover {
+      color: $link-hover-color;
+    }
+  }
+  
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  ul {
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+  
+  li{
+    list-style: none;
+  }
+
+  

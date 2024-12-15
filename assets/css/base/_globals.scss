@@ -1,0 +1,85 @@
+h1 {
+  font-size: rem($font-size-h1);
+}
+
+h2 {
+  font-size: rem($font-size-h2);
+}
+
+h3 {
+  font-size: rem($font-size-h3);
+}
+
+h4{
+  font-size: rem($font-size-h4);
+}
+
+p {
+  font-size: rem($font-size-p);
+  margin-bottom: 12px;
+}
+
+section {
+    padding: 72px 0;  
+    .section-title {
+      color: $primary-color;
+      margin-bottom: 48px;
+      position: relative;
+      display: inline-block;
+      cursor: default;
+      &::after {
+        content: '';
+        width: 50px;
+        height: 3px;
+        background: $secondary-color;
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: width 0.4s ease-in-out;
+      }
+      &:hover::after {
+        width: 100px;
+      }
+    }
+
+.sections-btns {
+  @include buttons;
+  &:hover {
+    background: darken($secondary-color, 10%);
+  }
+}
+}
+
+.flex-container {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@include responsive("lg-devices"){ 
+  h1 { font-size: rem(28); }
+  h2 { font-size: rem(26); }
+  h3 { font-size: rem(18); }
+  h4 { font-size: rem(17);}
+  p { margin-bottom: 2px;}
+  p,li { font-size: rem(14); }
+  section{padding: $section-padding-lg;}
+}
+
+@include responsive("md-devices") { 
+  h1 { font-size: rem(26); }
+  h2 { font-size: rem(25); }
+  h3 { font-size: rem(17); }
+  h4 { font-size: rem(16);}
+  section{padding: $section-padding-md;}
+}
+
+@include responsive ("sm-devices"){
+  h1 { font-size: rem(20); }
+  h2 { font-size: rem(18); }
+  h3 { font-size: rem(16); }
+  h4 { font-size: rem(15); }
+  section{padding: $section-padding-sm;}
+}
