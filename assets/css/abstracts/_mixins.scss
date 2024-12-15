@@ -1,7 +1,10 @@
+@use "sass:color";
+@use "colors";
+
 @mixin buttons {
     display: inline-block;
-    color: $text-color;
-    background: $background-color-btns;
+    color: colors.$text-color;
+    background: colors.$background-color-btns;
     padding: 16px 32px;
     border: none;
     border-radius: 5px;
@@ -19,15 +22,15 @@
     }
   
     &:hover {
-      background: $secondary-color;
-      color: $accent-light-bg;
+      background: colors.$secondary-color;
+      color: colors.$accent-light-bg;
       transform: translateY(-3px);
     }
   }
   
   @mixin progress-bar($width: 100%) {
     position: relative;
-    background: lighten($primary-color, 50%);
+    background: color.adjust(colors.$primary-color, $lightness: 50%);
     border-radius: 5px;
     height: 10px;
     width: 100%;
@@ -36,7 +39,7 @@
       content: '';
       display: block;
       height: 100%;
-      background: $primary-color;
+      background: colors.$primary-color;
       border-radius: 5px;
       transition: width 0.3s ease-in-out;
       width: $width;

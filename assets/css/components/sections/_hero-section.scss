@@ -1,6 +1,11 @@
+@use "../../abstracts/colors";
+@use "../../abstracts/functions";
+@use "../../abstracts/mixins";
+@use "../../abstracts/variables";
+
 .hero-section {
-  background: radial-gradient(circle at center, $primary-color, $secondary-color);
-  color: $accent-light-bg;
+  background: radial-gradient(circle at center, colors.$primary-color, colors.$secondary-color);
+  color: colors.$accent-light-bg;
   padding: 150px 0;
   text-align: center;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
@@ -18,15 +23,15 @@
     h1 {
       animation-delay: 0s; 
       margin-bottom: 30px;
-      font-weight: $font-weight-regular;
+      font-weight: variables.$font-weight-regular;
       text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
     h2 {
       animation-delay: 0.4s;
       margin-bottom: 30px;
       font-size: 60px;
-      font-weight: $font-weight-bold;
-      color: $accent-light-bg;
+      font-weight: variables.$font-weight-bold;
+      color: colors.$accent-light-bg;
       text-transform: uppercase;
       letter-spacing: 2px;
       text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
@@ -55,7 +60,7 @@
 }
 
 
-    @include responsive("md-devices") {
+    @include mixins.responsive("md-devices") {
       .hero-section{
         .hero-content{
           h1,
@@ -64,30 +69,30 @@
             margin-bottom: 22px; 
           }
           h1 {
-            font-size: rem(20);
+            font-size: functions.rem(20);
           }
           h2 {
-            font-size: rem(40);
+            font-size: functions.rem(40);
           }
           p{
-          font-size: rem(14);
+          font-size: functions.rem(14);
         }  
       } 
     }
   }
 
-  @include responsive("sm-devices") {
+  @include mixins.responsive("sm-devices") {
     .hero-section{
       padding: 110px 0;
       .hero-content{
         h1 {
-          font-size: rem(16);
+          font-size: functions.rem(16);
         }
         h2 {
-          font-size: rem(28);
+          font-size: functions.rem(28);
         } 
         p{
-          font-size: rem(13);
+          font-size: functions.rem(13);
         }
     } 
   }

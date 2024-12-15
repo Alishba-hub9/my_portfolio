@@ -1,32 +1,35 @@
+@use "../../abstracts/mixins";
+@use "../../abstracts/variables";
+
 .skills-section {  
     .skill {
       margin-bottom: 16px;
   
       span {
         display: block;
-        font-weight: $font-weight-bold;
+        font-weight: variables.$font-weight-bold;
 
       }
   
       .progress {  
         &.progress-70 {
-          @include progress-bar(70%);
+          @include mixins.progress-bar(70%);
         }
   
         &.progress-50 {
-          @include progress-bar(50%);
+          @include mixins.progress-bar(50%);
         }
   
         &.progress-90 {
-          @include progress-bar(90%);
+          @include mixins.progress-bar(90%);
         }
   
         &.progress-60 {
-          @include progress-bar(60%);
+          @include mixins.progress-bar(60%);
         }
   
         &.progress-80 {
-          @include progress-bar(80%);
+          @include mixins.progress-bar(80%);
         }
       }
     }

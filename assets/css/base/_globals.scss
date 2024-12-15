@@ -1,28 +1,34 @@
+@use "sass:color";
+@use "../abstracts/colors";
+@use "../abstracts/functions";
+@use "../abstracts/mixins";
+@use "../abstracts/variables";
+
 h1 {
-  font-size: rem($font-size-h1);
+  font-size: functions.rem(variables.$font-size-h1);
 }
 
 h2 {
-  font-size: rem($font-size-h2);
+  font-size: functions.rem(variables.$font-size-h2);
 }
 
 h3 {
-  font-size: rem($font-size-h3);
+  font-size: functions.rem(variables.$font-size-h3);
 }
 
 h4{
-  font-size: rem($font-size-h4);
+  font-size: functions.rem(variables.$font-size-h4);
 }
 
 p {
-  font-size: rem($font-size-p);
+  font-size: functions.rem(variables.$font-size-p);
   margin-bottom: 12px;
 }
 
 section {
     padding: 72px 0;  
     .section-title {
-      color: $primary-color;
+      color: colors.$primary-color;
       margin-bottom: 48px;
       position: relative;
       display: inline-block;
@@ -31,7 +37,7 @@ section {
         content: '';
         width: 50px;
         height: 3px;
-        background: $secondary-color;
+        background: colors.$secondary-color;
         position: absolute;
         bottom: -10px;
         left: 50%;
@@ -44,9 +50,9 @@ section {
     }
 
 .sections-btns {
-  @include buttons;
+  @include mixins.buttons;
   &:hover {
-    background: darken($secondary-color, 10%);
+    background: color.adjust(colors.$secondary-color, $lightness: -10%);
   }
 }
 }
@@ -58,28 +64,28 @@ section {
   flex-wrap: wrap;
 }
 
-@include responsive("lg-devices"){ 
-  h1 { font-size: rem(28); }
-  h2 { font-size: rem(26); }
-  h3 { font-size: rem(18); }
-  h4 { font-size: rem(17);}
+@include mixins.responsive("lg-devices"){ 
+  h1 { font-size: functions.rem(28); }
+  h2 { font-size: functions.rem(26); }
+  h3 { font-size: functions.rem(18); }
+  h4 { font-size: functions.rem(17);}
   p { margin-bottom: 2px;}
-  p,li { font-size: rem(14); }
-  section{padding: $section-padding-lg;}
+  p,li { font-size: functions.rem(14); }
+  section{padding: variables.$section-padding-lg;}
 }
 
-@include responsive("md-devices") { 
-  h1 { font-size: rem(26); }
-  h2 { font-size: rem(25); }
-  h3 { font-size: rem(17); }
-  h4 { font-size: rem(16);}
-  section{padding: $section-padding-md;}
+@include mixins.responsive("md-devices") { 
+  h1 { font-size: functions.rem(26); }
+  h2 { font-size: functions.rem(25); }
+  h3 { font-size: functions.rem(17); }
+  h4 { font-size: functions.rem(16);}
+  section{padding: variables.$section-padding-md;}
 }
 
-@include responsive ("sm-devices"){
-  h1 { font-size: rem(20); }
-  h2 { font-size: rem(18); }
-  h3 { font-size: rem(16); }
-  h4 { font-size: rem(15); }
-  section{padding: $section-padding-sm;}
+@include mixins.responsive ("sm-devices"){
+  h1 { font-size: functions.rem(20); }
+  h2 { font-size: functions.rem(18); }
+  h3 { font-size: functions.rem(16); }
+  h4 { font-size: functions.rem(15); }
+  section{padding: variables.$section-padding-sm;}
 }

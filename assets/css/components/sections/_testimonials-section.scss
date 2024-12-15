@@ -1,3 +1,7 @@
+@use "sass:color";
+@use "../../abstracts/colors";
+@use "../../abstracts/variables";
+
 .testimonials-section {
     .testimonials-carousel {
       .owl-nav {
@@ -9,7 +13,7 @@
         
         .owl-prev, .owl-next {
           position: absolute;
-          background-color: $primary-color;
+          background-color: colors.$primary-color;
           color: #fff;
           border-radius: 50%;
           display: flex;
@@ -23,7 +27,7 @@
           margin: 0 8px;
           
           &:hover {
-            background-color: darken($primary-color, 10%);
+            background-color: color.adjust(colors.$primary-color, $lightness: -10%);
             transform: scale(1.1);
           }
         }
@@ -37,12 +41,12 @@
         
       .testimonial {
         @extend .flex-container;
-        background: $accent-light-bg;
-        color: $text-color;
+        background: colors.$accent-light-bg;
+        color: colors.$text-color;
         padding: 35px 15px 20px;
         border-radius: 5px;
         position: relative;
-        border-left: 3px solid $secondary-color;
+        border-left: 3px solid colors.$secondary-color;
         transition: transform 0.3s ease, box-shadow 0.3s;
         text-align: center;
         height: 500px;
@@ -57,12 +61,12 @@
             object-fit: cover;
             margin: auto;
             border-radius: 50%;
-            border: 3px solid $primary-color;
+            border: 3px solid colors.$primary-color;
           }
 
           h4 {
-            font-weight: $font-weight-bold;
-            color: $primary-color;
+            font-weight: variables.$font-weight-bold;
+            color: colors.$primary-color;
             margin-left: auto;
           }
         }

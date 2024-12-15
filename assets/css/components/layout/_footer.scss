@@ -1,19 +1,22 @@
+@use "../../abstracts/colors";
+@use "../../abstracts/mixins";
+
 // Footer
 footer {
     text-align: center;
     padding: 18px;
-    background: $primary-color;
-    color: $accent-light-bg;
+    background: colors.$primary-color;
+    color: colors.$accent-light-bg;
     a {
       color: #44785a;
   
       &:hover {
-        color: $accent-light-bg;
+        color: colors.$accent-light-bg;
       }
     }
   }
 
-  @include responsive('lg-devices') {
+  @include mixins.responsive('lg-devices') {
     footer{
     padding: 20px;
 }

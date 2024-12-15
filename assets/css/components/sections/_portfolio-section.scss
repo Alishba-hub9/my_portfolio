@@ -1,8 +1,13 @@
+@use "sass:color";
+@use "../../abstracts/colors";
+@use "../../abstracts/mixins";
+@use "../../abstracts/variables";
+
 .portfolio-section {
     .portfolio-cards {
       @extend .flex-container;
       background: #fff;
-      border: 1px solid $background-color-btns;
+      border: 1px solid colors.$background-color-btns;
       border-radius: 5px;
       transition: transform 0.3s, box-shadow 0.3s;
       text-align: center;
@@ -15,7 +20,7 @@
       }
 
       img {
-        border-bottom: 1px solid $background-color-btns;
+        border-bottom: 1px solid colors.$background-color-btns;
       }
       .portfolio-content{
         padding: 5px;
@@ -23,23 +28,23 @@
         margin: auto;
 
       h3 {
-        font-weight: $font-weight-bold;
-        color: $text-color;
+        font-weight: variables.$font-weight-bold;
+        color: colors.$text-color;
         margin-bottom: 5px;
       }
 
       p {
-        color: darken($text-color, 10%);
+        color: color.adjust(colors.$text-color, $lightness: -10%);
         line-height: 1.5;
       }
     }
 
       a {
         margin: 0 auto 16px;
-        @include buttons;
+        @include mixins.buttons;
         &:hover {
-          background: $secondary-color;
-          color: $accent-light-bg;
+          background: colors.$secondary-color;
+          color: colors.$accent-light-bg;
         }
   }
 }
