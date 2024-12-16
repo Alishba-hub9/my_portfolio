@@ -1,36 +1,36 @@
-@use "../../abstracts/mixins";
+@use "../../abstracts/colors";
 @use "../../abstracts/variables";
 
-.skills-section {  
-    .skill {
-      margin-bottom: 16px;
-  
-      span {
-        display: block;
-        font-weight: variables.$font-weight-bold;
+.skills-section {
+  .skill {
+    margin-bottom: 16px;
 
+    span {
+      display: block;
+      font-weight: variables.$font-weight-bold;
+    }
+
+    .progress {
+      position: relative;
+      background: colors.$bg-progress-bars;
+      border-radius: 5px;
+      height: 10px;
+      width: 100%;
+
+      &::before {
+        content: '';
+        display: block;
+        height: 100%;
+        background: colors.$primary-color;
+        border-radius: 5px;
+        transition: width 0.3s ease-in-out;
       }
-  
-      .progress {  
-        &.progress-70 {
-          @include mixins.progress-bar(70%);
-        }
-  
-        &.progress-50 {
-          @include mixins.progress-bar(50%);
-        }
-  
-        &.progress-90 {
-          @include mixins.progress-bar(90%);
-        }
-  
-        &.progress-60 {
-          @include mixins.progress-bar(60%);
-        }
-  
-        &.progress-80 {
-          @include mixins.progress-bar(80%);
-        }
-      }
+
+      &.progress-50::before { width: 50%; }
+      &.progress-60::before { width: 60%; }
+      &.progress-70::before { width: 70%; }
+      &.progress-80::before { width: 80%; }
+      &.progress-90::before { width: 90%; }
     }
   }
+}
