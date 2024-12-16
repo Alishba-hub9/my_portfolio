@@ -4,6 +4,11 @@
 @use "../abstracts/mixins";
 @use "../abstracts/variables";
 
+@font-face {
+  font-family: "Jost";
+  src: url("/assets/fonts/jost/Jost-Regular.ttf");
+}
+
 h1 {
   font-size: functions.rem(variables.$font-size-h1);
 }
@@ -23,6 +28,13 @@ h4{
 p {
   font-size: functions.rem(variables.$font-size-p);
   margin-bottom: 12px;
+}
+
+a {
+  color: colors.$primary-color;
+  &:hover {
+    color: colors.$link-hover-color;
+  }
 }
 
 section {
