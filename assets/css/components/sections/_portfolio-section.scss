@@ -1,11 +1,11 @@
 @use "sass:color";
-@use "../../abstracts/colors";
 @use "../../abstracts/mixins";
+@use "../../abstracts/colors";
 @use "../../abstracts/variables";
 
 .portfolio-section {
     .portfolio-cards {
-      @extend .flex-container;
+      @include mixins.flex-container(space-between,null,column,15px);
       background: #fff;
       border: 1px solid colors.$background-color-btns;
       border-radius: 5px;
@@ -23,7 +23,7 @@
         border-bottom: 1px solid colors.$background-color-btns;
       }
       .portfolio-content{
-        padding: 5px;
+        padding: 0 16px;
         width: 100%;
         margin: auto;
 

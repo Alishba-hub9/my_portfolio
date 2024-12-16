@@ -26,7 +26,6 @@ header {
   }
   
     .nav-menu {
-      @extend .flex-container;
       .nav-link {
         color: colors.$accent-light-bg;
         padding: 0 20px;
@@ -47,7 +46,6 @@ header {
 }
     }
 .nav-menu{
-  display: block;
   text-align: center;
    li {
     margin-bottom: 12px;

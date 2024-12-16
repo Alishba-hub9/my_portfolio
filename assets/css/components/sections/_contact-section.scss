@@ -1,14 +1,11 @@
-@use "sass:color";
+ @use "sass:color";
 @use "../../abstracts/colors";
 @use "../../abstracts/mixins";
 
 .contact-section {
     .contact-form {
-      @extend .flex-container;
         ul {
           li {
-            @extend .flex-container;
-
             i {
               color: colors.$primary-color;
               margin-right: 5px;
@@ -30,6 +27,7 @@
           padding: 16px;
           border: 1px solid color.adjust(colors.$primary-color, $lightness: 40%);
           border-radius: 5px;
+          margin-bottom: 6px;
 
           &:focus {
             border-color: colors.$primary-color;
@@ -40,7 +38,6 @@
 
         button {
           width: 100%;
-          @extend .sections-btns;
         }
       }
     }

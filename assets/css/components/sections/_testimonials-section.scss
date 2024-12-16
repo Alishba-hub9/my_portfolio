@@ -1,6 +1,7 @@
 @use "sass:color";
 @use "../../abstracts/colors";
 @use "../../abstracts/variables";
+@use "../../abstracts/mixins";
 
 .testimonials-section {
     .testimonials-carousel {
@@ -40,10 +41,10 @@
       }
         
       .testimonial {
-        @extend .flex-container;
+        @include mixins.flex-container(space-between,center,column,null);
         background: colors.$accent-light-bg;
         color: colors.$text-color;
-        padding: 35px 15px 20px;
+        padding: 0px 19px 60px;
         border-radius: 5px;
         position: relative;
         border-left: 3px solid colors.$secondary-color;

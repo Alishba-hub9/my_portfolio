@@ -1,6 +1,14 @@
 @use "sass:color";
 @use "colors";
 
+@mixin flex-container($justify, $align, $direction, $gap:5px) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+  gap: $gap;
+}
+
 @mixin buttons {
     display: inline-block;
     color: colors.$text-color;
