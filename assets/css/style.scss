@@ -1,15 +1,10 @@
 @use 'base/reset';
+@use 'base/globals';
+
 @use 'abstracts/variables';
 @use 'abstracts/functions';
 @use 'abstracts/mixins';
 @use 'abstracts/colors';
-@use 'base/globals';
-@use 'components/layout/header';
-@use 'components/layout/footer';
-@use 'components/sections/hero-section';
-@use 'components/sections/about-section';
-@use 'components/sections/portfolio-section';
-@use 'components/sections/services-section';
-@use 'components/sections/skills-section';
-@use 'components/sections/testimonials-section';
-@use 'components/sections/contact-section';
+
+@use 'components/index.scss'
+
