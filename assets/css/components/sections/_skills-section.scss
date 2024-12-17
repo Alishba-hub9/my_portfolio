@@ -2,6 +2,11 @@
 @use "../../abstracts/variables";
 
 .skills-section {
+  .skills-info{
+    p{
+      margin-bottom: 16px;
+    }
+  }
   .skill {
     margin-bottom: 16px;
 
@@ -12,7 +17,7 @@
 
     .progress {
       position: relative;
-      background: colors.$bg-progress-bars;
+      background: colors.$accent-light-bg;
       border-radius: 5px;
       height: 10px;
       width: 100%;

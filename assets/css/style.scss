@@ -1,10 +1,11 @@
 @use 'base/reset';
-@use 'base/globals';
 
 @use 'abstracts/variables';
 @use 'abstracts/functions';
 @use 'abstracts/mixins';
 @use 'abstracts/colors';
+
+@use 'base/globals';
 
 @use 'components/index.scss'
 

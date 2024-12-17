@@ -3,6 +3,11 @@
 @use "../../abstracts/mixins";
 
 .contact-section {
+  .contact-info{
+    p{
+      margin-bottom: 12px;
+    }
+  }
     .contact-form {
         ul {
           li {
@@ -25,7 +30,7 @@
         select {
           width:100%;
           padding: 16px;
-          border: 1px solid color.adjust(colors.$primary-color, $lightness: 40%);
+          border: 1px solid transparent;
           border-radius: 5px;
           margin-bottom: 6px;
 

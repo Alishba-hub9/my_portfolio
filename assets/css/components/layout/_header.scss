@@ -4,7 +4,7 @@
 @use "../../abstracts/variables";
 
 header {
-    background: linear-gradient(45deg, colors.$primary-color, color.adjust(colors.$primary-color, $lightness: 20%));
+    background: linear-gradient(45deg, colors.$primary-color, colors.$hero-bg-color);
     color: colors.$accent-light-bg;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   

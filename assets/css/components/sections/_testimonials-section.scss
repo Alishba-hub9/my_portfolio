@@ -28,7 +28,7 @@
           margin: 0 8px;
           
           &:hover {
-            background-color: color.adjust(colors.$primary-color, $lightness: -10%);
+            background-color: colors.$arrows-hover-color;
             transform: scale(1.1);
           }
         }
@@ -44,7 +44,7 @@
         @include mixins.flex-container(space-between,center,column,null);
         background: colors.$accent-light-bg;
         color: colors.$text-color;
-        padding: 0px 19px 60px;
+        padding: 45px 19px 60px;
         border-radius: 5px;
         position: relative;
         border-left: 3px solid colors.$secondary-color;
@@ -60,7 +60,7 @@
             height: 200px;
             width: 200px;
             object-fit: cover;
-            margin: auto;
+            margin: 0 auto;
             border-radius: 50%;
             border: 3px solid colors.$primary-color;
           }
@@ -68,7 +68,6 @@
           h4 {
             font-weight: variables.$font-weight-bold;
             color: colors.$primary-color;
-            margin-left: auto;
           }
         }
     }

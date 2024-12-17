@@ -19,16 +19,10 @@
       i {
         font-size: 20px;
         color: colors.$primary-color;
-        margin-bottom: 16px;
       }
 
       h3 {
         color: colors.$primary-color;
-      }
-
-      p {
-        margin: 13px 0;
-        color: color.adjust(colors.$text-color, $lightness: -10%);
       }
     }
 }

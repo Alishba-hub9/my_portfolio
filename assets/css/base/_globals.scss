@@ -9,6 +9,10 @@
   src: url("/assets/fonts/jost/Jost-Regular.ttf");
 }
 
+html{
+  font-size: 16px;
+}
+
 h1 {
   font-size: functions.rem(variables.$font-size-h1);
 }
@@ -27,7 +31,6 @@ h4{
 
 p {
   font-size: functions.rem(variables.$font-size-p);
-  margin-bottom: 12px;
 }
 
 a {
@@ -64,33 +67,25 @@ section {
 .sections-btns {
   @include mixins.buttons;
   &:hover {
-    background: color.adjust(colors.$secondary-color, $lightness: -10%);
+    background: colors.$btns-hover-secondary-color;
   }
 }
 }
 
 @include mixins.responsive("lg-devices"){ 
-  h1 { font-size: functions.rem(28); }
-  h2 { font-size: functions.rem(26); }
-  h3 { font-size: functions.rem(18); }
-  h4 { font-size: functions.rem(17);}
-  p { margin-bottom: 2px;}
-  p,li { font-size: functions.rem(14); }
-  section{padding: variables.$section-padding-lg;}
+  html{
+  font-size: 14px;
+}
 }
 
 @include mixins.responsive("md-devices") { 
-  h1 { font-size: functions.rem(26); }
-  h2 { font-size: functions.rem(25); }
-  h3 { font-size: functions.rem(17); }
-  h4 { font-size: functions.rem(16);}
-  section{padding: variables.$section-padding-md;}
+  html{
+  font-size: 13px;
+}
 }
 
 @include mixins.responsive ("sm-devices"){
-  h1 { font-size: functions.rem(20); }
-  h2 { font-size: functions.rem(18); }
-  h3 { font-size: functions.rem(16); }
-  h4 { font-size: functions.rem(15); }
-  section{padding: variables.$section-padding-sm;}
+  html{
+    font-size: 12px;
+  }
 }
