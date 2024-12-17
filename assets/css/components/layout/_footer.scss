@@ -1,10 +1,11 @@
 @use "../../abstracts/colors";
 @use "../../abstracts/mixins";
+@use "../../abstracts/functions";
 
 // Footer
 footer {
     text-align: center;
-    padding: 18px;
+    padding: functions.rem(18);
     background: colors.$primary-color;
     color: colors.$accent-light-bg;
     a {
@@ -14,10 +15,4 @@ footer {
         color: colors.$accent-light-bg;
       }
     }
-  }
-
-  @include mixins.responsive('lg-devices') {
-    footer{
-    padding: 20px;
-}
   }

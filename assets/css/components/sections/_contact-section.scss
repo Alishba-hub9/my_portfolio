@@ -1,72 +1,49 @@
- @use "sass:color";
+@use "sass:color";
 @use "../../abstracts/colors";
 @use "../../abstracts/mixins";
+@use "../../abstracts/functions";
 
 .contact-section {
-  .contact-info{
-    p{
-      margin-bottom: 12px;
+  .contact-info {
+    p {
+      margin-bottom: functions.rem(12);
     }
   }
-    .contact-form {
-        ul {
-          li {
-            i {
-              color: colors.$primary-color;
-              margin-right: 5px;
-              font-size: 19px;
-            }
-
-            a {
-              &:hover {
-                color: colors.$secondary-color;
-              }
-            }
-          }
-      }
-
-        input,
-        textarea,
-        select {
-          width:100%;
-          padding: 16px;
-          border: 1px solid transparent;
-          border-radius: 5px;
-          margin-bottom: 6px;
-
-          &:focus {
-            border-color: colors.$primary-color;
-            outline: none;
-            box-shadow: 0 0 5px rgba(colors.$primary-color, 0.5);
-          }
+  .contact-form {
+    ul {
+      li {
+        i {
+          color: colors.$primary-color;
+          margin-right: 5px;
+          font-size: functions.rem(19);
         }
 
-        button {
-          width: 100%;
+        a {
+          &:hover {
+            color: colors.$secondary-color;
+          }
         }
       }
     }
 
-    @include mixins.responsive("md-devices"){
-      .contact-section {
-        .contact-form {
-          input,
-          textarea,
-          select {
-            padding: 12px;
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: functions.rem(16);
+      border: 1px solid transparent;
+      border-radius: 5px;
+      margin-bottom: functions.rem(8);
+
+      &:focus {
+        border-color: colors.$primary-color;
+        outline: none;
+        box-shadow: 0 0 5px rgba(colors.$primary-color, 0.5);
       }
     }
-  }
-  }
 
-  @include mixins.responsive("sm-devices"){
-    .contact-section {
-      .contact-form {
-        input,
-        textarea,
-        select {
-          padding: 10px;
+    button {
+      width: 100%;
     }
   }
-}
 }

@@ -2,63 +2,48 @@
 @use "../../abstracts/colors";
 @use "../../abstracts/mixins";
 @use "../../abstracts/variables";
+@use "../../abstracts/functions";
 
 header {
-    background: linear-gradient(45deg, colors.$primary-color, colors.$hero-bg-color);
-    color: colors.$accent-light-bg;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  
-    .navbar-content{
-     padding: 8px 0;
-     .navbar-toggler,
-     .navbar-toggler:focus {
+  background: linear-gradient(45deg, colors.$primary-color, colors.$hero-bg-color);
+  color: colors.$accent-light-bg;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+  .navbar-content {
+    padding: functions.rem(8) 0;
+    .navbar-toggler,
+    .navbar-toggler:focus {
       box-shadow: none;
       border: none;
-     }
     }
-  
-    .logo {
-      a{
-      font-size: 32px;
+  }
+
+  .logo {
+    a {
+      font-size: functions.rem(32);
       font-weight: variables.$font-weight-bold;
       color: #44785a;
     }
   }
-  
-    .nav-menu {
-      .nav-link {
-        color: colors.$accent-light-bg;
-        padding: 0 20px;
-        transition: color 0.3s ease-in-out;
-  
-        &:hover {
-          color: colors.$secondary-color;
-        }
+
+  .nav-menu {
+    .nav-link {
+      color: colors.$accent-light-bg;
+      padding: 0 functions.rem(16);
+      transition: color 0.3s ease-in-out;
+
+      &:hover {
+        color: colors.$secondary-color;
       }
     }
   }
+}
 
-  @include mixins.responsive('lg-devices') {
-    header{
-    .logo{
-      a{
-    font-size: 28px;
-}
-    }
-.nav-menu{
-  text-align: center;
-   li {
-    margin-bottom: 12px;
-  }
-}
+@include mixins.responsive("lg-devices") {
+  .nav-menu {
+    text-align: center;
+    li {
+      margin-bottom: functions.rem(8);
     }
   }
-  @include mixins.responsive('sm-devices') {
-    header{
-    .logo{
-      a{
-    font-size: 21px;
 }
-    }
-}
-  }

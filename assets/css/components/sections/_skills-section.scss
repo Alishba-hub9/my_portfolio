@@ -1,15 +1,15 @@
 @use "../../abstracts/colors";
 @use "../../abstracts/variables";
+@use "../../abstracts/functions";
 
 .skills-section {
-  .skills-info{
-    p{
-      margin-bottom: 16px;
+  .skills-info {
+    .skill,
+    p {
+      margin-bottom: functions.rem(16);
     }
   }
   .skill {
-    margin-bottom: 16px;
-
     span {
       display: block;
       font-weight: variables.$font-weight-bold;
@@ -21,9 +21,10 @@
       border-radius: 5px;
       height: 10px;
       width: 100%;
+      margin-bottom: functions.rem(8);
 
       &::before {
-        content: '';
+        content: "";
         display: block;
         height: 100%;
         background: colors.$primary-color;
@@ -31,11 +32,21 @@
         transition: width 0.3s ease-in-out;
       }
 
-      &.progress-50::before { width: 50%; }
-      &.progress-60::before { width: 60%; }
-      &.progress-70::before { width: 70%; }
-      &.progress-80::before { width: 80%; }
-      &.progress-90::before { width: 90%; }
+      &.progress-50::before {
+        width: 50%;
+      }
+      &.progress-60::before {
+        width: 60%;
+      }
+      &.progress-70::before {
+        width: 70%;
+      }
+      &.progress-80::before {
+        width: 80%;
+      }
+      &.progress-90::before {
+        width: 90%;
+      }
     }
   }
 }

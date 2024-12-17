@@ -9,83 +9,87 @@
   src: url("/assets/fonts/jost/Jost-Regular.ttf");
 }
 
-html{
+html,body{
   font-size: 16px;
-}
-
-h1 {
-  font-size: functions.rem(variables.$font-size-h1);
-}
-
-h2 {
-  font-size: functions.rem(variables.$font-size-h2);
-}
-
-h3 {
-  font-size: functions.rem(variables.$font-size-h3);
-}
-
-h4{
-  font-size: functions.rem(variables.$font-size-h4);
-}
-
-p {
-  font-size: functions.rem(variables.$font-size-p);
-}
-
-a {
-  color: colors.$primary-color;
-  &:hover {
-    color: colors.$link-hover-color;
+  h2 {
+    font-size: functions.rem(variables.$font-size-h2);
   }
-}
-
-section {
-    padding: 72px 0;  
-    .section-title {
-      color: colors.$primary-color;
-      margin-bottom: 48px;
-      position: relative;
-      display: inline-block;
-      cursor: default;
-      &::after {
-        content: '';
-        width: 50px;
-        height: 3px;
-        background: colors.$secondary-color;
-        position: absolute;
-        bottom: -10px;
-        left: 50%;
-        transform: translateX(-50%);
-        transition: width 0.4s ease-in-out;
-      }
-      &:hover::after {
-        width: 100px;
-      }
+  
+  h3 {
+    font-size: functions.rem(variables.$font-size-h3);
+  }
+  
+  h4{
+    font-size: functions.rem(variables.$font-size-h4);
+  }
+  
+  p {
+    font-size: functions.rem(variables.$font-size-p);
+  }
+  
+  a {
+    color: colors.$primary-color;
+    &:hover {
+      color: colors.$link-hover-color;
     }
-
-.sections-btns {
-  @include mixins.buttons;
-  &:hover {
-    background: colors.$btns-hover-secondary-color;
   }
 }
-}
+
 
 @include mixins.responsive("lg-devices"){ 
-  html{
+  html,body{
   font-size: 14px;
+  section{
+    padding: functions.rem(40)0;
+  }
 }
 }
 
 @include mixins.responsive("md-devices") { 
-  html{
-  font-size: 13px;
+  html,body{
+  font-size: 16px;
 }
 }
 
 @include mixins.responsive ("sm-devices"){
-  html{
-    font-size: 12px;
+  html,body{
+    font-size: 14px;
+    section{
+      padding: functions.rem(40)0;
+    }
   }
+}
+
+
+
+section {
+  padding: functions.rem(72)0;  
+  .section-title {
+    color: colors.$primary-color;
+    margin-bottom: functions.rem(46);
+    position: relative;
+    display: inline-block;
+    cursor: default;
+    &::after {
+      content: '';
+      width: 50px;
+      height: 3px;
+      background: colors.$secondary-color;
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      transition: width 0.4s ease-in-out;
+    }
+    &:hover::after {
+      width: 100px;
+    }
+  }
+
+.sections-btns {
+@include mixins.buttons;
+&:hover {
+  background: colors.$btns-hover-secondary-color;
+}
+}
 }
