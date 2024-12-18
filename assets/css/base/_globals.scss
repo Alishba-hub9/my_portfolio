@@ -4,6 +4,14 @@
 @use "../abstracts/mixins";
 @use "../abstracts/variables";
 
+html,
+body{
+font-family: "Jost";
+overflow-x: hidden;
+background-color: colors.$background-color;
+color: colors.$text-color;
+}
+
 @font-face {
   font-family: "Jost";
   src: url("/assets/fonts/jost/Jost-Regular.ttf");
