@@ -2,7 +2,7 @@
 @use "colors";
 @use "../abstracts/functions";
 
-@mixin flex-container($justify, $align, $direction, $gap:5px) {
+@mixin flex-container($justify, $align, $direction, $gap: 5px) {
   display: flex;
   justify-content: $justify;
   align-items: $align;
@@ -10,37 +10,18 @@
   gap: $gap;
 }
 
-@mixin buttons {
-    display: inline-block;
-    color: colors.$text-color;
-    background: colors.$background-color-btns;
-    padding: functions.rem(14) functions.rem(32);
-    border: none;
-    border-radius: 5px;
-    transition: 0.3s all ease;
-    text-align: center;
-    &:hover {
-      background: colors.$secondary-color;
-      color: colors.$accent-light-bg;
-      transform: translateY(-3px);
+@mixin responsive($device) {
+  @if $device == "lg-devices" {
+    @media (max-width: 990px) {
+      @content;
+    }
+  } @else if $device == "md-devices" {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $device == "sm-devices" {
+    @media (max-width: 576px) {
+      @content;
     }
   }
-
-  @mixin responsive($device) {
-    @if $device == 'lg-devices' {
-      @media (max-width: 990px) {
-        @content;
-      }
-    }
-    @else if $device == 'md-devices' {
-      @media (max-width: 768px) {
-        @content;
-      }
-    }
-    @else if $device == 'sm-devices' {
-      @media (max-width: 576px) {
-        @content;
-      }
-    }
-  }
-  
+}

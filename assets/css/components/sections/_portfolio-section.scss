@@ -39,13 +39,8 @@
       }
     }
 
-    a {
+    .sections-btns {
       margin: 0 auto functions.rem(16);
-      @include mixins.buttons;
-      &:hover {
-        background: colors.$secondary-color;
-        color: colors.$accent-light-bg;
-      }
     }
   }
 }
